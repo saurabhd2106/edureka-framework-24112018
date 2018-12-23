@@ -54,14 +54,16 @@ public class CommonDriver implements IDriver {
 			throw new Exception("Invalid BrowserType : " + browserType);
 		}
 
+		driver.manage().deleteAllCookies();
+		driver.manage().window().maximize();
 	}
 
 	@Override
 	public void navigateToFirstUrl(String url) throws Exception {
 
 		url = url.trim();
-		driver.manage().deleteAllCookies();
-
+		
+		
 		driver.manage().timeouts().pageLoadTimeout(pageloadTimeout, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(elementDetectionTimeout, TimeUnit.SECONDS);
 
