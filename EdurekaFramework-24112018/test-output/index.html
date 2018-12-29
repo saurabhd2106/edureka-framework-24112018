@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Hompage_Test_Suite">
-              <span class="suite-name border-passed">Hompage Test Suite</span>
+              <span class="suite-name border-failed">Hompage Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Hompage_Test_Suite" class="hide-methods passed suite-Hompage_Test_Suite"> (hide)</a> <!-- hide-methods passed suite-Hompage_Test_Suite -->
-                      <a href="#" panel-name="suite-Hompage_Test_Suite" class="show-methods passed suite-Hompage_Test_Suite"> (show)</a> <!-- show-methods passed suite-Hompage_Test_Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Hompage_Test_Suite" class="hide-methods failed suite-Hompage_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-Hompage_Test_Suite -->
+                      <a href="#" panel-name="suite-Hompage_Test_Suite" class="show-methods failed suite-Hompage_Test_Suite"> (show)</a> <!-- show-methods failed suite-Hompage_Test_Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Hompage_Test_Suite">
+                    <div class="method-list-content failed suite-Hompage_Test_Suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Hompage_Test_Suite" title="com.mercuryTravel.tests.HomepageTests" hash-for-method="verifyUserLoginToMercureyTravel">verifyUserLoginToMercureyTravel</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Hompage_Test_Suite -->
+                    </div> <!-- method-list-content failed suite-Hompage_Test_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,9 +117,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Hompage_Test_Suite" class="panel Hompage_Test_Suite">
-          <div class="suite-Hompage_Test_Suite-class-passed">
+          <div class="suite-Hompage_Test_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.mercuryTravel.tests.HomepageTests</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -128,10 +128,14 @@
                   <a name="verifyUserLoginToMercureyTravel">
                   </a> <!-- verifyUserLoginToMercureyTravel -->
                   <span class="method-name">verifyUserLoginToMercureyTravel</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [Welcome, Saurabh 1] but found [Welcome, Saurabh]
+	at com.mercuryTravel.tests.HomepageTests.verifyUserLoginToMercureyTravel(HomepageTests.java:24)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Hompage_Test_Suite-class-passed -->
+          </div> <!-- suite-Hompage_Test_Suite-class-failed -->
         </div> <!-- panel Hompage_Test_Suite -->
         <div panel-name="test-xml-Hompage_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -188,7 +192,7 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyUserLoginToMercureyTravel')
 data.setCell(0, 2, 'com.mercuryTravel.tests.HomepageTests')
-data.setCell(0, 3, 4267);
+data.setCell(0, 3, 4666);
 window.suiteTableData['Hompage_Test_Suite']= { tableData: data, tableDiv: 'times-div-Hompage_Test_Suite'}
 return data;
 }
@@ -226,16 +230,26 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">setup</span>
-                <span class="method-start">63 ms</span>
+                <span class="method-start">542 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">verifyUserLoginToMercureyTravel</span>
-                <span class="method-start">41980 ms</span>
+                <span class="method-start">16789 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterAMethod([TestResult name=verifyUserLoginToMercureyTravel status=FAILURE method=HomepageTests.verifyUserLogin...)</span>
+                <span class="method-start">21463 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">cleanup</span>
-                <span class="method-start">46251 ms</span>
+                <span class="method-start">23077 ms</span>
               </div> <!-- configuration-class after -->
+              <div class="configuration-suite after">
+                <span class="method-name">postCleanup</span>
+                <span class="method-start">24246 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

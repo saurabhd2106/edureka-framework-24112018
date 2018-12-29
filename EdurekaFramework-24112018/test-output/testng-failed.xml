@@ -6,9 +6,11 @@
       <class name="com.mercuryTravel.tests.HomepageTests">
         <methods>
           <include name="presetup"/>
+          <include name="afterAMethod"/>
           <include name="verifyUserLoginToMercureyTravel"/>
           <include name="setup"/>
           <include name="cleanup"/>
+          <include name="postCleanup"/>
         </methods>
       </class> <!-- com.mercuryTravel.tests.HomepageTests -->
     </classes>
