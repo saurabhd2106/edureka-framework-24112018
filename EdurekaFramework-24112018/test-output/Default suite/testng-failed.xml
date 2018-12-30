@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="designPattern.DemoAmazonPOM2Style">
+      <class name="com.mercuryTravel.utils.TestDataProvider">
         <methods>
-          <include name="verifySearchProduct"/>
-          <include name="invokeBrowser"/>
-          <include name="closeBrowser"/>
+          <include name="printTestData"/>
         </methods>
-      </class> <!-- designPattern.DemoAmazonPOM2Style -->
+      </class> <!-- com.mercuryTravel.utils.TestDataProvider -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
